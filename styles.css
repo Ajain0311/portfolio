@@ -5,7 +5,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0; /* Reset margin */
+    margin: 0; 
+    padding: 50px;
 }
 
 .dark-theme {
@@ -13,17 +14,23 @@ body {
     color: #fff;
 }
 
-/* Sidebar styles */
 .sidebar {
     position: fixed;
-    left: 0;
-    top: 0;
+    border-radius: 20px;
+    left: 100px;
+    top: 100px;
     width: 200px;
     height: 100%;
     background-color: #333;
     padding-top: 20px;
     overflow-y: auto;
     overflow-wrap: break-word;
+    background-image: url(images/a2.jpg);
+    background-size: 100vh 100vw;
+    background-position: center;
+    z-index: 1;
+    max-height: calc(100% - 100px);
+    scrollbar-width: none;
 }
 .sidebar img {
     width: 130px;
@@ -35,7 +42,6 @@ body {
     transform: rotate(0deg);
     filter: contrast(200%);
 }
-
 .sidebar span{
     border: 3px dotted white;
     color: pink;
@@ -46,19 +52,15 @@ body {
     border-radius: 20%;
     transform: rotate(0deg);
 }
-
 .sidebar span:hover{
-    animation: border-spinner 2s linear infinite;
+    animation: border-spinner 3s linear infinite;
 }
-
 .sidebar img:hover{
     animation: border-spinner 3s ease-in-out infinite;
 }
-
 .sidebar li:hover {
-    animation: border-spinner 2s linear infinite;
+    animation: border-spinner 3s linear infinite;
 }
-
 @keyframes border-spinner {
     0% { border-color: transparent; transform: rotate(0deg); }
     25% { border-color: red;}
@@ -87,7 +89,7 @@ body {
     position: absolute;
     bottom: 100px;
     font-size:larger;
-    width: 100%; /* Ensure full width */
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -98,6 +100,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    font-size:x-large;
 }
 
 #social-icons i:hover {
@@ -107,17 +110,206 @@ body {
     transform: scale(2); 
 }
 
-/* Main content styles */
+/*Main page*/
+/*Main page*/
+/*Main page*/
+/*Main page*/
+/*Main page*/
+/*Main page*/
+
+
+
 .main-content {
-    margin-left: 200px; /* Width of the sidebar */
+    margin-left: 203px; /* Adjusted margin to accommodate sidebar width plus additional space */
     padding: 20px;
+    position: absolute;
+    border-radius: 20px;
+    
+    background-color: rgb(6, 6, 45);
+    /*background-image: url(images/wild.jpg);  Change the path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position:center;
+    background-attachment: fixed; /* Fix the background image in place */
+    z-index: 2; /* Ensure main content appears above sidebar */
+    top: 100px;
+    left: 100px;
+    bottom: 0;
+    right: 100px;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
+.row ul li{
+    list-style-type: none;
+    padding: 7px;
+}
+
+.row{
+    display: flex;
+}
 .section {
     margin-bottom: 40px;
 }
 
+.iamdev .listin {
+    display: flex;
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: lightblue;
+}
+
+.iamdev h1{
+    text-align: center;
+    padding: 20px;
+    color:fff;
+    margin-top: 20px;
+}
+
+.iamdev .listin .inlist {
+    margin-right: 10px;
+}
+
+.iamdev img {
+    width: 90px;
+    height: 90px;
+}
+
+.iamdev strong {
+    font-weight: bold;
+    font-size: larger;
+    color: darkblue;
+}
+
+.iamdev p {
+    margin: 0;
+    color: #666;
+}
+
+.iamdev li {
+    padding: 10px;
+}
+
+.iamdev .listin:hover {
+    background-color: #ef0d0d;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.iamdev .listin:hover strong,
+.iamdev .listin:hover p {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.inlist {
+    display: flex;
+    margin-left: 2%;
+    align-items: center;
+    flex: 1;
+}
+
+.inlist2 strong{
+    font-size: x-large;
+    margin-top: 0px;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.inlist2 p{
+    margin-left: 25px;
+    margin-top: 20px;
+    font-size: larger;
+}
+
+
+/*Resume ---2nd Page*
+--------------------
+---------------------*/
+.resume .resume-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: ffffff; /* Adjust color as needed */
+}
+
+.resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #1f5297; /* Adjust border color */
+    position: relative;
+}
+
+.resume .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: ffffff; /* Adjust color as needed */
+    margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+    font-size: 16px;
+    background: 000000;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+    padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+    padding-bottom: 0px;
+}
+
+.resume .resume-item:last-child {
+    padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: #fff;
+    border: 2px solid #f5f9ff; /* Adjust border color */
+}
+
+
 /* Progress bar styles */
+
+
+.section{
+    margin-top: 60px;
+
+}
+
+.skill {
+    position: relative;
+    overflow: hidden;
+}
+
+.skill h3 {
+    margin-top: 15px;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.skill:hover h3 {
+    transform: translate3d(100px,20px,10px);
+
+}
+
 .progress-bar {
     width: 100%;
     background-color: #555;
@@ -129,9 +321,31 @@ body {
     background-color: #4caf50;
     height: 100%;
     border-radius: 5px;
+    transition: background-color 0.5s ease; /* Adding transition */
 }
 
-/* Skill styles */
-.skill h3 {
-    margin-top: 0;
+.skill:hover .progress {
+    width: 100%;
+    background-color: red; /* Changing progress color on hover */
 }
+
+@keyframes prog-tracker {
+    0% {
+        left: 0;
+        right: 100vw;
+    }
+    50% {
+        left: calc(100vw - 20px); /* Adjusted for the width of the progress bar */
+        right: 0;
+    }
+    100% {
+        left: 0;
+        right: 100vw;
+    }
+}
+
+.skill:hover {
+    animation: prog-tracker 3s ease linear;
+}
+
+
