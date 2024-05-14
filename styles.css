@@ -144,12 +144,14 @@ body {
     padding: 7px;
 }
 
+#about h1{
+    margin-top: 0px;
+}
+
 .row{
     display: flex;
 }
-.section {
-    margin-bottom: 40px;
-}
+
 
 .iamdev .listin {
     display: flex;
@@ -321,25 +323,22 @@ body {
     background-color: #4caf50;
     height: 100%;
     border-radius: 5px;
-    transition: background-color 0.5s ease; /* Adding transition */
+    transition: background-color 0.5s ease; 
 }
 
 .skill:hover .progress {
     width: 100%;
-    background-color: red; /* Changing progress color on hover */
+    background-color: red; 
 }
 
 @keyframes prog-tracker {
     0% {
-        left: 0;
         right: 100vw;
     }
     50% {
-        left: calc(100vw - 20px); /* Adjusted for the width of the progress bar */
-        right: 0;
+        left: calc(100vw - 20px); 
     }
     100% {
-        left: 0;
         right: 100vw;
     }
 }
@@ -349,3 +348,92 @@ body {
 }
 
 
+
+@media (width <= 850px) {
+    .main-content {
+        padding: 0px; /* Change padding to 0 when device width is 850px or less */
+    }
+    .sidebar{
+        padding: 0px;
+    }
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  form {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  input[type=text], input[type=email], input[type=tel],textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+#googleMap{
+    width:100%;
+    height:400px;
+}
+
+#locateMe {
+    text-align: center;
+    padding: 20px;
+    animation: changecolor 1s ease infinite;
+  }
+  
+  @keyframes changecolor {
+    0% { color: red; }
+    10% { color: orange; }
+    20% { color: yellow; }
+    30% { color: green; }
+    40% { color: blue; }
+    50% { color: indigo; }
+    60% { color: violet; }
+    70% { color: purple; }
+    80% { color: pink; }
+    90% { color: brown; }
+    100% { color: black; }
+  }
+
+  #thankYou {
+    text-align: center;
+    padding: 20px;
+    font-size: 400%;
+    background-color: transparent;
+    animation: blink 1s steps(2, start) infinite;
+  }
+  
+  @keyframes blink {
+    0%{opacity: 100%;}
+    50% { opacity: 0; }
+    100%{ opacity: 100%;}
+  }
