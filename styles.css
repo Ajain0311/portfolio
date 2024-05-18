@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0; 
-    padding: 50px;
+    margin: 0;
+    padding: 50px; /* Adjusted padding for desktop */
 }
 
 .dark-theme {
@@ -14,6 +15,7 @@ body {
     color: #fff;
 }
 
+/* Sidebar Styles */
 .sidebar {
     position: fixed;
     border-radius: 20px;
@@ -55,14 +57,8 @@ body {
     transform: rotate(0deg);
 }
 
-.sidebar span:hover {
-    animation: border-spinner 3s linear infinite;
-}
-
-.sidebar img:hover {
-    animation: border-spinner 3s ease-in-out infinite;
-}
-
+.sidebar span:hover,
+.sidebar img:hover,
 .sidebar li:hover {
     animation: border-spinner 3s linear infinite;
 }
@@ -118,6 +114,7 @@ body {
     transform: scale(2); 
 }
 
+/* Main Content Styles */
 .main-content {
     margin-left: 203px;
     padding: 20px;
@@ -136,13 +133,14 @@ body {
     scrollbar-width: none;
 }
 
+/* IAMDEV Section Styles */
 .row ul li {
     list-style-type: none;
     padding: 7px;
 }
 
 #about h1 {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .row {
@@ -210,7 +208,7 @@ body {
 
 .inlist2 strong {
     font-size: x-large;
-    margin-top: 0px;
+    margin-top: 0;
     text-align: center;
     margin-left: 40px;
 }
@@ -221,6 +219,7 @@ body {
     font-size: larger;
 }
 
+/* Resume Section Styles */
 .resume .resume-title {
     font-size: 26px;
     font-weight: 700;
@@ -260,7 +259,7 @@ body {
 }
 
 .resume .resume-item ul li {
-    padding-bottom: 0px;
+    padding-bottom: 0;
 }
 
 .resume .resume-item:last-child {
@@ -279,10 +278,12 @@ body {
     border: 2px solid #f5f9ff;
 }
 
+/* Section Margin */
 .section {
     margin-top: 60px;
 }
 
+/* Skill Section Styles */
 .skill {
     position: relative;
     overflow: hidden;
@@ -333,6 +334,7 @@ body {
     animation: prog-tracker 3s ease linear;
 }
 
+/* Media Queries */
 @media (max-width: 850px) {
     .sidebar {
         position: relative;
@@ -347,6 +349,7 @@ body {
         align-items: center;
         background-size: cover;
     }
+
     .main-content {
         margin-left: 0;
         padding: 10px;
@@ -355,10 +358,12 @@ body {
         right: 0;
         bottom: auto;
     }
+
     .sidebar div {
         position: static;
         margin-top: 20px;
     }
+
     #social-icons {
         position: static;
         margin-top: 20px;
@@ -369,21 +374,109 @@ body {
     .main-content {
         padding: 5px;
     }
+
     .sidebar img {
         width: 100px;
         height: 100px;
     }
+
     .sidebar span {
         margin-left: 20px;
     }
 }
 
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 0;
+    }
+
+    .main-content {
+        padding: 3%;
+    }
+
+    .sidebar img {
+        width: 70%;
+    }
+
+    .sidebar span {
+        margin-left: 5%;
+        font-size: small;
+    }
+
+    .iamdev h1 {
+        padding: 3% 5%;
+    }
+
+    .iamdev img {
+        width: 30%;
+    }
+
+    .inlist2 strong {
+        font-size: large;
+    }
+
+    .inlist2 p {
+        margin-left: 10%;
+        margin-top: 3%;
+        font-size: small;
+    }
+
+    .resume .resume-item {
+        padding: 0 0 3% 5%;
+    }
+
+    .resume .resume-item h4 {
+        font-size: medium;
+    }
+
+    .resume .resume-item h5 {
+        font-size: small;
+        padding: 1% 5%;
+    }
+
+    .container {
+        padding: 3%;
+    }
+
+    form {
+        padding: 3%;
+    }
+
+    input[type=text], input[type=email], input[type=tel], textarea {
+        padding: 3%;
+    }
+
+    input[type=submit] {
+        padding: 3%;
+    }
+
+    label {
+        padding: 3%;
+    }
+
+    #locateMe {
+        padding: 3%;
+    }
+
+    #thankYou {
+        padding: 3%;
+        font-size: 300%;
+    }
+}
+
+/* Container Styles */
 .container {
     max-width: 100%;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* Form Styles */
 form {
     background-color: #f2f2f2;
     padding: 20px;
@@ -419,11 +512,13 @@ label {
     display: inline-block;
 }
 
+/* Google Map Styles */
 #googleMap {
     width: 100%;
     height: 400px;
 }
 
+/* Locate Me Styles */
 #locateMe {
     text-align: center;
     padding: 20px;
@@ -444,6 +539,7 @@ label {
     100% { color: black; }
 }
 
+/* Thank You Styles */
 #thankYou {
     text-align: center;
     padding: 20px;
@@ -456,104 +552,4 @@ label {
     0% { opacity: 100%; }
     50% { opacity: 0; }
     100% { opacity: 100%; }
-}
-/* Existing CSS rules */
-
-/* Adjustments for mobile phones */
-@media (max-width: 480px) {
-    body {
-        padding: 20%;
-    }
-
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        left: 0;
-        top: 0;
-        max-height: none;
-        padding: 0%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-size: cover;
-    }
-
-    .main-content {
-        margin-left: 0;
-        padding: 3%;
-        top: auto;
-        left: 0;
-        right: 0;
-        bottom: auto;
-    }
-
-    .sidebar img {
-        width: 70%;
-    }
-
-    .sidebar span {
-        margin-left: 5%;
-        font-size: small; /* Adjust font size for smaller screens */
-    }
-
-    .iamdev h1 {
-        padding: 3% 5%; /* Adjust padding for smaller screens */
-    }
-
-    .iamdev img {
-        width: 30%; /* Adjust image size for smaller screens */
-    }
-
-    .inlist2 strong {
-        font-size: large; /* Adjust font size for smaller screens */
-    }
-
-    .inlist2 p {
-        margin-left: 10%;
-        margin-top: 3%;
-        font-size: small; /* Adjust font size for smaller screens */
-    }
-
-    .resume .resume-item {
-        padding: 0 0 3% 5%;
-    }
-
-    .resume .resume-item h4 {
-        font-size: medium; /* Adjust font size for smaller screens */
-    }
-
-    .resume .resume-item h5 {
-        font-size: small; /* Adjust font size for smaller screens */
-        padding: 1% 5%; /* Adjust padding for smaller screens */
-    }
-
-    .container {
-        padding: 3%;
-    }
-
-    form {
-        padding: 3%;
-    }
-
-    input[type=text], input[type=email], input[type=tel], textarea {
-        padding: 3%;
-    }
-
-    input[type=submit] {
-        padding: 3%;
-    }
-
-    label {
-        padding: 3%;
-    }
-
-    #locateMe {
-        padding: 3%;
-    }
-
-    #thankYou {
-        padding: 3%;
-        font-size: 300%; /* Adjust font size for smaller screens */
-    }
 }
