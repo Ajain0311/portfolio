@@ -32,6 +32,7 @@ body {
     max-height: calc(100% - 100px);
     scrollbar-width: none;
 }
+
 .sidebar img {
     width: 130px;
     height: 130px;
@@ -42,7 +43,8 @@ body {
     transform: rotate(0deg);
     filter: contrast(200%);
 }
-.sidebar span{
+
+.sidebar span {
     border: 3px dotted white;
     color: pink;
     padding: 10px 15px;
@@ -52,20 +54,24 @@ body {
     border-radius: 20%;
     transform: rotate(0deg);
 }
-.sidebar span:hover{
+
+.sidebar span:hover {
     animation: border-spinner 3s linear infinite;
 }
-.sidebar img:hover{
+
+.sidebar img:hover {
     animation: border-spinner 3s ease-in-out infinite;
 }
+
 .sidebar li:hover {
     animation: border-spinner 3s linear infinite;
 }
+
 @keyframes border-spinner {
     0% { border-color: transparent; transform: rotate(0deg); }
-    25% { border-color: red;}
-    50% { border-color: green;}
-    75% { border-color: blue;}
+    25% { border-color: red; }
+    50% { border-color: green; }
+    75% { border-color: blue; }
     100% { border-color: pink; transform: rotate(360deg); }
 }
 
@@ -78,21 +84,23 @@ body {
     margin-top: 20px;
     padding: 10px 0;
     text-align: center;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .sidebar a {
     text-decoration: none;
     color: #fff;
 }
-.sidebar div{
+
+.sidebar div {
     position: absolute;
     bottom: 100px;
-    font-size:larger;
+    font-size: larger;
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 #social-icons {
     position: absolute;
     bottom: 50px;
@@ -100,7 +108,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    font-size:x-large;
+    font-size: x-large;
 }
 
 #social-icons i:hover {
@@ -110,27 +118,16 @@ body {
     transform: scale(2); 
 }
 
-/*Main page*/
-/*Main page*/
-/*Main page*/
-/*Main page*/
-/*Main page*/
-/*Main page*/
-
-
-
 .main-content {
-    margin-left: 203px; /* Adjusted margin to accommodate sidebar width plus additional space */
+    margin-left: 203px;
     padding: 20px;
     position: absolute;
     border-radius: 20px;
-    
     background-color: rgb(6, 6, 45);
-    /*background-image: url(images/wild.jpg);  Change the path to your image */
-    background-size: cover; /* Cover the entire viewport */
-    background-position:center;
-    background-attachment: fixed; /* Fix the background image in place */
-    z-index: 2; /* Ensure main content appears above sidebar */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 2;
     top: 100px;
     left: 100px;
     bottom: 0;
@@ -139,19 +136,18 @@ body {
     scrollbar-width: none;
 }
 
-.row ul li{
+.row ul li {
     list-style-type: none;
     padding: 7px;
 }
 
-#about h1{
+#about h1 {
     margin-top: 0px;
 }
 
-.row{
+.row {
     display: flex;
 }
-
 
 .iamdev .listin {
     display: flex;
@@ -162,10 +158,10 @@ body {
     background-color: lightblue;
 }
 
-.iamdev h1{
+.iamdev h1 {
     text-align: center;
     padding: 20px;
-    color:fff;
+    color: #fff;
     margin-top: 20px;
 }
 
@@ -212,35 +208,31 @@ body {
     flex: 1;
 }
 
-.inlist2 strong{
+.inlist2 strong {
     font-size: x-large;
     margin-top: 0px;
     text-align: center;
     margin-left: 40px;
 }
 
-.inlist2 p{
+.inlist2 p {
     margin-left: 25px;
     margin-top: 20px;
     font-size: larger;
 }
 
-
-/*Resume ---2nd Page*
---------------------
----------------------*/
 .resume .resume-title {
     font-size: 26px;
     font-weight: 700;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: ffffff; /* Adjust color as needed */
+    color: #ffffff;
 }
 
 .resume .resume-item {
     padding: 0 0 20px 20px;
     margin-top: -2px;
-    border-left: 2px solid #1f5297; /* Adjust border color */
+    border-left: 2px solid #1f5297;
     position: relative;
 }
 
@@ -250,13 +242,13 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
-    color: ffffff; /* Adjust color as needed */
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
     font-size: 16px;
-    background: 000000;
+    background: #000000;
     padding: 5px 15px;
     display: inline-block;
     font-weight: 600;
@@ -284,16 +276,11 @@ body {
     left: -9px;
     top: 0;
     background: #fff;
-    border: 2px solid #f5f9ff; /* Adjust border color */
+    border: 2px solid #f5f9ff;
 }
 
-
-/* Progress bar styles */
-
-
-.section{
+.section {
     margin-top: 60px;
-
 }
 
 .skill {
@@ -308,8 +295,7 @@ body {
 }
 
 .skill:hover h3 {
-    transform: translate3d(100px,20px,10px);
-
+    transform: translate3d(100px, 20px, 10px);
 }
 
 .progress-bar {
@@ -347,14 +333,48 @@ body {
     animation: prog-tracker 3s ease linear;
 }
 
-
-
-@media (width <= 850px) {
-    .main-content {
-        padding: 0px; /* Change padding to 0 when device width is 850px or less */
+@media (max-width: 850px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        left: 0;
+        top: 0;
+        max-height: none;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-size: cover;
     }
-    .sidebar{
-        padding: 0px;
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: auto;
+    }
+    .sidebar div {
+        position: static;
+        margin-top: 20px;
+    }
+    #social-icons {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-content {
+        padding: 5px;
+    }
+    .sidebar img {
+        width: 100px;
+        height: 100px;
+    }
+    .sidebar span {
+        margin-left: 20px;
     }
 }
 
@@ -362,15 +382,15 @@ body {
     max-width: 100%;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  form {
+}
+
+form {
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 5px;
-  }
-  
-  input[type=text], input[type=email], input[type=tel],textarea {
+}
+
+input[type=text], input[type=email], input[type=tel], textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -379,38 +399,38 @@ body {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-  }
-  
-  input[type=submit] {
+}
+
+input[type=submit] {
     background-color: #4CAF50;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
+}
+
+input[type=submit]:hover {
     background-color: #45a049;
-  }
-  
-  label {
+}
+
+label {
     padding: 12px 12px 12px 0;
     display: inline-block;
-  }
-  
-#googleMap{
-    width:100%;
-    height:400px;
+}
+
+#googleMap {
+    width: 100%;
+    height: 400px;
 }
 
 #locateMe {
     text-align: center;
     padding: 20px;
     animation: changecolor 1s ease infinite;
-  }
-  
-  @keyframes changecolor {
+}
+
+@keyframes changecolor {
     0% { color: red; }
     10% { color: orange; }
     20% { color: yellow; }
@@ -422,18 +442,18 @@ body {
     80% { color: pink; }
     90% { color: brown; }
     100% { color: black; }
-  }
+}
 
-  #thankYou {
+#thankYou {
     text-align: center;
     padding: 20px;
     font-size: 400%;
     background-color: transparent;
     animation: blink 1s steps(2, start) infinite;
-  }
-  
-  @keyframes blink {
-    0%{opacity: 100%;}
+}
+
+@keyframes blink {
+    0% { opacity: 100%; }
     50% { opacity: 0; }
-    100%{ opacity: 100%;}
-  }
+    100% { opacity: 100%; }
+}
