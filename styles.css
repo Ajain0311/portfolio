@@ -52,7 +52,7 @@ body {
     padding: 10px 15px;
     display: inline-block;
     margin-top: 20px;
-    margin-left: 45px;
+    margin-left: 15px;
     border-radius: 20%;
     transform: rotate(0deg);
 }
@@ -60,7 +60,7 @@ body {
 .sidebar span:hover,
 .sidebar img:hover,
 .sidebar li:hover {
-    animation: border-spinner 3s linear infinite;
+    animation: border-spinner 5s linear infinite;
 }
 
 @keyframes border-spinner {
@@ -387,7 +387,7 @@ body {
 
 @media (max-width: 480px) {
     body {
-        padding: 20px;
+        padding: 10px;
     }
 
     .sidebar {
@@ -404,7 +404,7 @@ body {
     }
 
     .sidebar span {
-        margin-left: 5%;
+        margin-left: 0%;
         font-size: small;
     }
 
