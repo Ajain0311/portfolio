@@ -457,3 +457,103 @@ label {
     50% { opacity: 0; }
     100% { opacity: 100%; }
 }
+/* Existing CSS rules */
+
+/* Adjustments for mobile phones */
+@media (max-width: 480px) {
+    body {
+        padding: 20%;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        left: 0;
+        top: 0;
+        max-height: none;
+        padding: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-size: cover;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 3%;
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: auto;
+    }
+
+    .sidebar img {
+        width: 70%;
+    }
+
+    .sidebar span {
+        margin-left: 5%;
+        font-size: small; /* Adjust font size for smaller screens */
+    }
+
+    .iamdev h1 {
+        padding: 3% 5%; /* Adjust padding for smaller screens */
+    }
+
+    .iamdev img {
+        width: 30%; /* Adjust image size for smaller screens */
+    }
+
+    .inlist2 strong {
+        font-size: large; /* Adjust font size for smaller screens */
+    }
+
+    .inlist2 p {
+        margin-left: 10%;
+        margin-top: 3%;
+        font-size: small; /* Adjust font size for smaller screens */
+    }
+
+    .resume .resume-item {
+        padding: 0 0 3% 5%;
+    }
+
+    .resume .resume-item h4 {
+        font-size: medium; /* Adjust font size for smaller screens */
+    }
+
+    .resume .resume-item h5 {
+        font-size: small; /* Adjust font size for smaller screens */
+        padding: 1% 5%; /* Adjust padding for smaller screens */
+    }
+
+    .container {
+        padding: 3%;
+    }
+
+    form {
+        padding: 3%;
+    }
+
+    input[type=text], input[type=email], input[type=tel], textarea {
+        padding: 3%;
+    }
+
+    input[type=submit] {
+        padding: 3%;
+    }
+
+    label {
+        padding: 3%;
+    }
+
+    #locateMe {
+        padding: 3%;
+    }
+
+    #thankYou {
+        padding: 3%;
+        font-size: 300%; /* Adjust font size for smaller screens */
+    }
+}
