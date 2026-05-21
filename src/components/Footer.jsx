@@ -7,20 +7,22 @@ const socials = [
 ]
 
 export default function Footer() {
-  const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
-
   return (
-    <footer className="border-t border-[#27272A] py-8 px-6">
+    <footer className="border-t border-[#1F1F1F] py-8 px-6">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="text-[#71717A] text-sm text-center sm:text-left">
-          © 2025{' '}
-          <span className="text-white font-medium">Aditya Jain</span>
-          {' '}· Crafted with{' '}
-          <FaHeart className="inline text-red-500 text-xs mx-0.5" />
-          {' '}in Udaipur, Rajasthan
+        <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-3 text-center sm:text-left">
+          <span className="font-heading font-bold text-white">
+            AD<span className="text-[#2563EB]">.</span>
+          </span>
+          <span className="hidden sm:block text-[#3F3F46]">·</span>
+          <span className="text-[#52525B] text-sm">
+            © 2025 Aditya Dhing — Crafted with{' '}
+            <FaHeart className="inline text-red-500 text-xs mx-0.5" />
+            {' '}in Udaipur
+          </span>
         </div>
 
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-4">
           {socials.map(({ icon: Icon, href, label }) => (
             <a
               key={label}
@@ -28,18 +30,17 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="text-[#52525B] hover:text-white transition-colors duration-200"
+              className="text-[#3F3F46] hover:text-white transition-colors duration-200"
             >
-              <Icon size={17} />
+              <Icon size={16} />
             </a>
           ))}
-
           <button
-            onClick={scrollTop}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             aria-label="Back to top"
-            className="ml-2 p-2 glass hover:bg-[#2563EB]/20 rounded-lg text-[#52525B] hover:text-[#60A5FA] transition-all duration-200"
+            className="ml-1 p-2 glass hover:bg-[#2563EB]/20 rounded-lg text-[#3F3F46] hover:text-[#60A5FA] transition-all duration-200"
           >
-            <FaArrowUp size={13} />
+            <FaArrowUp size={12} />
           </button>
         </div>
       </div>

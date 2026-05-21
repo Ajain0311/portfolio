@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope, FaArrowDown } from 'react-icons/fa'
 
-const roles = ['Software Engineer', 'Web Developer', 'Problem Solver', 'CS Graduate']
+const roles = ['Full Stack Developer', '.NET Core Engineer', 'React.js Developer', 'Enterprise Dev']
 
 const socials = [
   { icon: FaGithub, href: 'https://github.com/Ajain0311', label: 'GitHub' },
@@ -10,6 +10,8 @@ const socials = [
   { icon: FaInstagram, href: 'https://www.instagram.com/ad_jain311/', label: 'Instagram' },
   { icon: FaEnvelope, href: 'mailto:adityajain8875389629@gmail.com', label: 'Email' },
 ]
+
+const coreTech = ['.NET Core', 'React.js', 'Spring Boot', 'SignalR', 'Azure', 'Oracle DB']
 
 function TypewriterText() {
   const [roleIndex, setRoleIndex] = useState(0)
@@ -19,29 +21,27 @@ function TypewriterText() {
   useEffect(() => {
     const current = roles[roleIndex]
     let timeout
-
     if (typing) {
       if (displayed.length < current.length) {
-        timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), 75)
+        timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), 70)
       } else {
-        timeout = setTimeout(() => setTyping(false), 2200)
+        timeout = setTimeout(() => setTyping(false), 2400)
       }
     } else {
       if (displayed.length > 0) {
-        timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 35)
+        timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 30)
       } else {
         setRoleIndex((i) => (i + 1) % roles.length)
         setTyping(true)
       }
     }
-
     return () => clearTimeout(timeout)
   }, [displayed, typing, roleIndex])
 
   return (
-    <span className="text-[#2563EB]">
+    <span className="text-[#2563EB] font-heading">
       {displayed}
-      <span className="animate-pulse">|</span>
+      <span className="animate-pulse text-[#60A5FA]">|</span>
     </span>
   )
 }
@@ -49,40 +49,45 @@ function TypewriterText() {
 export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-16">
-      {/* Background orbs */}
+      {/* Gradient orbs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
-          animate={{ scale: [1, 1.1, 1], opacity: [0.15, 0.25, 0.15] }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-[#2563EB] rounded-full blur-[120px]"
+          animate={{ scale: [1, 1.15, 1], opacity: [0.12, 0.22, 0.12] }}
+          transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute -top-40 -left-40 w-[700px] h-[700px] bg-[#2563EB] rounded-full blur-[140px]"
         />
         <motion.div
-          animate={{ scale: [1.1, 1, 1.1], opacity: [0.1, 0.2, 0.1] }}
-          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-          className="absolute -bottom-32 -right-32 w-[500px] h-[500px] bg-[#7C3AED] rounded-full blur-[120px]"
+          animate={{ scale: [1.1, 1, 1.1], opacity: [0.08, 0.16, 0.08] }}
+          transition={{ duration: 11, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
+          className="absolute -bottom-40 -right-40 w-[600px] h-[600px] bg-[#7C3AED] rounded-full blur-[140px]"
+        />
+        <motion.div
+          animate={{ opacity: [0.05, 0.12, 0.05] }}
+          transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#06B6D4] rounded-full blur-[100px]"
         />
       </div>
 
-      {/* Subtle grid */}
+      {/* Grid */}
       <div
-        className="absolute inset-0 opacity-[0.025]"
+        className="absolute inset-0 opacity-[0.022]"
         style={{
-          backgroundImage:
-            'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)',
+          backgroundImage: 'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)',
           backgroundSize: '60px 60px',
         }}
       />
 
       <div className="relative max-w-6xl mx-auto px-6 py-20 w-full">
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
-          {/* Text */}
+        <div className="flex flex-col lg:flex-row items-center gap-14 lg:gap-20">
+
+          {/* ── Left: text content ── */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
             className="flex-1 text-center lg:text-left"
           >
-            {/* Available badge */}
+            {/* Status badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -90,23 +95,40 @@ export default function Hero() {
               className="inline-flex items-center gap-2 px-4 py-1.5 glass rounded-full text-sm font-medium mb-6"
             >
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-[#A1A1AA]">Available for opportunities</span>
+              <span className="text-[#A1A1AA]">Full-Time @ </span>
+              <span className="text-white font-semibold">E-Connect Solutions</span>
             </motion.div>
 
-            <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-5">
+            <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-tight mb-5">
               Hi, I'm
               <br />
-              <span className="gradient-text">Aditya Jain</span>
+              <span className="gradient-text">Aditya Dhing</span>
             </h1>
 
             <div className="font-heading text-xl sm:text-2xl text-[#71717A] mb-6 h-9">
               <TypewriterText />
             </div>
 
-            <p className="text-[#A1A1AA] text-base sm:text-lg max-w-lg mx-auto lg:mx-0 mb-8 leading-relaxed">
-              B.Tech CSE graduate passionate about building elegant software solutions.
-              Based in <span className="text-white font-medium">Udaipur, Rajasthan</span>.
+            <p className="text-[#A1A1AA] text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+              1+ year building <span className="text-white font-medium">enterprise web applications</span> with
+              .NET Core, Spring Boot & React.js. Delivered across a sales platform and a high-traffic government
+              citizen portal.
             </p>
+
+            {/* Core tech pills */}
+            <div className="flex flex-wrap gap-2 justify-center lg:justify-start mb-8">
+              {coreTech.map((tech, i) => (
+                <motion.span
+                  key={tech}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 + i * 0.06 }}
+                  className="tech-badge text-[#93C5FD]"
+                >
+                  {tech}
+                </motion.span>
+              ))}
+            </div>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-10">
               <a
@@ -116,10 +138,10 @@ export default function Hero() {
                 Get in Touch
               </a>
               <a
-                href="#skills"
+                href="#projects"
                 className="px-6 py-3 glass hover:bg-white/[0.08] border border-white/10 rounded-xl font-medium transition-all duration-200 hover:scale-105"
               >
-                View Skills
+                View Projects
               </a>
             </div>
 
@@ -140,60 +162,106 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Profile image */}
+          {/* ── Right: image + code card ── */}
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, ease: 'easeOut', delay: 0.15 }}
-            className="relative flex-shrink-0"
+            className="relative flex-shrink-0 flex flex-col items-center gap-5"
           >
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80">
-              {/* Glow rings */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#2563EB]/40 to-[#7C3AED]/30 rotate-6 blur-sm" />
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#2563EB]/20 to-transparent rotate-3" />
-
+            {/* Profile image */}
+            <div className="relative w-60 h-60 sm:w-68 sm:h-68 lg:w-72 lg:h-72">
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#2563EB]/50 to-[#7C3AED]/30 rotate-6 blur-sm" />
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-[#06B6D4]/20 to-transparent -rotate-3" />
               <img
                 src="/images/pictu.jpg"
-                alt="Aditya Jain"
+                alt="Aditya Dhing"
                 className="relative w-full h-full object-cover rounded-3xl border border-white/10 shadow-2xl"
               />
 
-              {/* Float badge — GPA */}
+              {/* Floating: CGPA */}
               <motion.div
                 animate={{ y: [-6, 6, -6] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -bottom-5 -left-8 glass rounded-2xl px-4 py-2.5 shadow-xl"
+                className="absolute -bottom-4 -left-10 glass rounded-2xl px-4 py-2.5 shadow-xl"
               >
-                <div className="text-[#A1A1AA] text-[10px] font-medium uppercase tracking-widest">CGPA</div>
-                <div className="font-heading font-bold text-xl text-[#2563EB]">8.91<span className="text-sm text-[#A1A1AA]">/10</span></div>
+                <div className="text-[#A1A1AA] text-[10px] uppercase tracking-widest">CGPA</div>
+                <div className="font-heading font-bold text-xl text-[#2563EB] number-glow">
+                  8.94<span className="text-sm text-[#A1A1AA]">/10</span>
+                </div>
               </motion.div>
 
-              {/* Float badge — Available */}
+              {/* Floating: Experience */}
               <motion.div
                 animate={{ y: [6, -6, 6] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-                className="absolute -top-5 -right-8 glass rounded-2xl px-4 py-2.5 shadow-xl"
+                className="absolute -top-4 -right-10 glass rounded-2xl px-4 py-2.5 shadow-xl"
               >
-                <div className="text-[#A1A1AA] text-[10px] font-medium uppercase tracking-widest">Status</div>
-                <div className="font-heading font-bold text-sm text-green-400">Available ✓</div>
+                <div className="text-[#A1A1AA] text-[10px] uppercase tracking-widest">Exp</div>
+                <div className="font-heading font-bold text-sm text-green-400">1+ Year</div>
               </motion.div>
             </div>
+
+            {/* Code terminal card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="w-full max-w-xs glass-dark rounded-2xl p-4 font-mono text-xs shadow-xl"
+            >
+              {/* Terminal dots */}
+              <div className="flex items-center gap-1.5 mb-3 pb-2.5 border-b border-white/5">
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500/70" />
+                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/70" />
+                <div className="w-2.5 h-2.5 rounded-full bg-green-500/70" />
+                <span className="ml-2 text-[#52525B] text-[10px]">developer.config.ts</span>
+              </div>
+              <div className="space-y-0.5 leading-5">
+                <div><span className="text-purple-400">const</span> <span className="text-blue-300">dev</span> <span className="text-white">= {'{'}</span></div>
+                <div className="pl-4">
+                  <span className="text-orange-300">name</span>
+                  <span className="text-white">: </span>
+                  <span className="text-green-300">"Aditya Dhing"</span>
+                  <span className="text-white">,</span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-orange-300">role</span>
+                  <span className="text-white">: </span>
+                  <span className="text-green-300">"Full Stack Dev"</span>
+                  <span className="text-white">,</span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-orange-300">stack</span>
+                  <span className="text-white">: [</span>
+                  <span className="text-cyan-300">".NET"</span>
+                  <span className="text-white">, </span>
+                  <span className="text-cyan-300">"React"</span>
+                  <span className="text-white">],</span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-orange-300">available</span>
+                  <span className="text-white">: </span>
+                  <span className="text-yellow-300">true</span>
+                </div>
+                <div><span className="text-white">{'}'}</span></div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll cue */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#52525B]"
+          transition={{ delay: 1.8 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#3F3F46]"
         >
-          <span className="text-xs tracking-widest uppercase">Scroll</span>
+          <span className="text-[10px] tracking-[0.2em] uppercase">Scroll</span>
           <motion.div
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
           >
-            <FaArrowDown size={12} />
+            <FaArrowDown size={11} />
           </motion.div>
         </motion.div>
       </div>
