@@ -91,7 +91,7 @@ export default function Contact() {
 
             {/* Resume download */}
             <a
-              href="https://drive.google.com/file/d/1KfRP_KaKYU7MSkbCTlesUUyXvsxrEwRd/view?usp=sharing"
+              href="https://drive.google.com/file/d/13G3wiPROzX_roWNsg1C-QkkUuBtKVHYT/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between gap-4 glass rounded-xl p-4 border border-[#2563EB]/20 hover:border-[#2563EB]/40 hover:bg-[#2563EB]/5 transition-all duration-300 group"
