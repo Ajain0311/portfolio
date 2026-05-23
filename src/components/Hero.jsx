@@ -141,7 +141,7 @@ export default function Hero() {
                 Get in Touch
               </a>
               <a
-                href="https://drive.google.com/file/d/1KfRP_KaKYU7MSkbCTlesUUyXvsxrEwRd/view?usp=sharing"
+                href="https://drive.google.com/file/d/13G3wiPROzX_roWNsg1C-QkkUuBtKVHYT/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 glass hover:bg-white/[0.08] border border-[#2563EB]/30 hover:border-[#2563EB]/60 text-[#60A5FA] rounded-xl font-medium transition-all duration-200 hover:scale-105"
