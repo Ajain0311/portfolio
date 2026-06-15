@@ -187,7 +187,7 @@ export default function Hero() {
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#2563EB]/50 to-[#7C3AED]/30 rotate-6 blur-sm" />
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-[#06B6D4]/20 to-transparent -rotate-3" />
               <img
-                src="/images/pictu.jpg"
+                src="/images/pictu.jpeg"
                 alt="Aditya Dhing"
                 className="relative w-full h-full object-cover rounded-3xl border border-white/10 shadow-2xl"
               />
