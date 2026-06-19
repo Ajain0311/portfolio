@@ -43,16 +43,17 @@ const featured = [
     tech: ['React', 'Node.js', 'JWT', 'RBAC', 'MySQL'],
     desc: 'A role-based attendance management system with dedicated dashboards for admins, managers, and employees — including tracking, reporting, and workforce insights.',
     bullets: [
-      'Three-tier role system: Admin, Manager, and Employee dashboards with scoped data access.',
+      'Four-tier role system: Super Admin, Admin, Manager, and User dashboards with scoped access.',
       'Real-time attendance tracking with analytics, custom date ranges, and reporting.',
       'Intuitive attendance visualization, bulk mark operations, and CSV export.',
     ],
     github: null,
     live: 'https://untracked.netlify.app',
     credentials: {
-      admin:    { username: 'admin',    password: 'Admin@123'    },
-      manager:  { username: 'manager',  password: 'Manager@123'  },
-      employee: { username: 'employee', password: 'Emp@123'      },
+      'super admin': { email: 'superadmin@trackme.com', password: 'SuperAdmin@123' },
+      admin:         { email: 'admin@trackme.com',      password: 'Admin@123'      },
+      manager:       { email: 'manager@trackme.com',    password: 'Manager@123'    },
+      user:          { email: 'user@trackme.com',       password: 'User@123'       },
     },
   },
   {
@@ -132,7 +133,7 @@ function CredentialPanel({ credentials }) {
   const [active, setActive]   = useState('admin')
   const [copied, setCopied]   = useState(null)
 
-  const roles = ['admin', 'manager', 'employee']
+  const roles = Object.keys(credentials)
   const cred  = credentials[active]
 
   const copy = (text, field) => {
@@ -177,7 +178,7 @@ function CredentialPanel({ credentials }) {
 
         {/* Fields */}
         <div className="space-y-1.5">
-          {([['username', cred.username], ['password', cred.password]]).map(([key, val]) => (
+          {([['email', cred.email], ['password', cred.password]]).map(([key, val]) => (
             <div
               key={key}
               className="flex items-center justify-between gap-3 rounded-lg px-3 py-2"
