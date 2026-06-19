@@ -1,3 +1,4 @@
+import { ThemeProvider } from './contexts/ThemeContext'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -8,9 +9,9 @@ import GitHubStats from './components/GitHubStats'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
-export default function App() {
+function AppContent() {
   return (
-    <div className="bg-[#09090B] text-[#FAFAFA] min-h-screen">
+    <div className="min-h-screen" style={{ background: 'var(--bg-primary)', color: 'var(--text-primary)' }}>
       <Navbar />
       <Hero />
       <About />
@@ -21,5 +22,13 @@ export default function App() {
       <Contact />
       <Footer />
     </div>
+  )
+}
+
+export default function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   )
 }
